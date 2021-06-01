@@ -3,9 +3,9 @@ body {
 }
 
 .board {
-    width: 306px; /*w306*/
+    width: 306px; /*w306 square*/
     background: #f0f0f0; /* bg */ /*light gray*/
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3px space */
     grid-template-rows: repeat(3, 100px);
     grid-gap: 3px;
     display: grid;
