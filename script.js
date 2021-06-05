@@ -3,7 +3,6 @@ const player2 = 'fa-times';
 let round_number = 1; //odd - player 1, even - player2
 let endGame = false;
 
-
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
 
@@ -52,9 +51,11 @@ function check() {
     winning_combinations.forEach(combination => {
         if (combination.every(index => moves[player1].indexOf(index) > -1)) {
             winner = "Winner: Player 1";
+            alert(winner);
             endGame = true;
         } else if (combination.every(index => moves[player2].indexOf(index) > -1)) {
             winner = "Winner: Player 2";
+            alert(winner);
             endGame = true;
         }
     });
