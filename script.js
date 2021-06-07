@@ -3,9 +3,9 @@ const player2 = 'fa-times';
 let round_number = 1; //odd - player 1, even - player2
 let endGame = false;
 
-let picks=0;
-let points1=0;
-let points2=0;
+let picks = 0;
+let points1 = 0;
+let points2 = 0;
 
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
@@ -23,18 +23,21 @@ const winning_combinations = [
 ]
 
 function pick(event) {
-    if(endGame === false){
-    console.log(event.target.dataset) //DOMStringMap {row: "0", column: "0"}
-    const { row, column } = event.target.dataset; // read data
-    console.log(row, column) //0 0
-    const turn = round_number % 2 === 1 ? player1 : player2;
-    if (board[row][column] !== '') return; // if false go forward if true stop function
-    picks++;
-    event.target.classList.add(turn);
-    board[row][column] = turn;
-    round_number++;
-    console.log(check());
-
+    if (endGame === false) {
+        console.log(event.target.dataset) //DOMStringMap {row: "0", column: "0"}
+        const { row, column } = event.target.dataset; // read data
+        console.log(row, column) //0 0
+        const turn = round_number % 2 === 1 ? player1 : player2;
+        if (board[row][column] !== '') return; // if false go forward if true stop function
+        picks++;
+        event.target.classList.add(turn);
+        board[row][column] = turn;
+        round_number++;
+        console.log(check());
+        if (endGame === false && picks === 9) {
+            alert("Draw");
+            picks = 0;
+        }
     }
 }
 // function two() {
@@ -65,10 +68,6 @@ function check() {
             points2++;
             alert(winner);
             endGame = true;
-        } else if (picks===9){
-            alert("Draw");
-            endGame = true;
-            picks=0;
         }
     });
     return winner;
