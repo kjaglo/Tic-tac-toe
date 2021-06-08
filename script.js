@@ -6,6 +6,10 @@ let endGame = false;
 let picks = 0;
 let points1 = 0;
 let points2 = 0;
+const score1 = document.getElementById("score1");
+score1.innerHTML = points1;
+const score2 = document.getElementById("score2");
+score2.innerHTML = points2;
 
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
@@ -63,11 +67,14 @@ function check() {
             points1++;
             alert(winner);
             endGame = true;
+            score1.innerHTML = points1;
         } else if (combination.every(index => moves[player2].indexOf(index) > -1)) {
             winner = "Winner: Player 2";
             points2++;
             alert(winner);
             endGame = true;
+            score2.innerHTML = points2;
+
         }
     });
     return winner;
