@@ -14,7 +14,7 @@ score2.innerHTML = points2;
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
 
-const board = [
+let board = [
     ['', '', ''],
     ['', '', ''],
     ['', '', '']
@@ -78,4 +78,20 @@ function check() {
         }
     });
     return winner;
+}
+function playAgainButton() {
+    const playAgain = confirm("play again");
+    if(playAgain){
+        console.log("Play again");
+        board = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+        round_number = 1;
+        picks = 0;
+        endGame = false;
+        boxes.forEach(box => box.classList="box fa");
+
+    }
 }
