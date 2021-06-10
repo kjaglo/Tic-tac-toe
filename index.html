@@ -12,32 +12,34 @@
 </head>
 
 <body>
-    <div class="board">
-        <!-- .board -->
+    <div class="content">
+        <div class="board">
+            <!-- .board -->
 
-        <!-- .box.fa[data-row data-column]*9 -->
+            <!-- .box.fa[data-row data-column]*9 -->
 
-        <div class="box fa" data-row="0" data-column="0"></div>
-        <div class="box fa" data-row="0" data-column="1"></div>
-        <div class="box fa" data-row="0" data-column="2"></div>
-        <div class="box fa" data-row="1" data-column="0"></div>
-        <div class="box fa" data-row="1" data-column="1"></div>
-        <div class="box fa" data-row="1" data-column="2"></div>
-        <div class="box fa" data-row="2" data-column="0"></div>
-        <div class="box fa" data-row="2" data-column="1"></div>
-        <div class="box fa" data-row="2" data-column="2"></div>
-    </div>
-    <div class="score">
-        <div>Player 1 O</div>
-        <div>Player 2 X</div>
+            <div class="box fa" data-row="0" data-column="0"></div>
+            <div class="box fa" data-row="0" data-column="1"></div>
+            <div class="box fa" data-row="0" data-column="2"></div>
+            <div class="box fa" data-row="1" data-column="0"></div>
+            <div class="box fa" data-row="1" data-column="1"></div>
+            <div class="box fa" data-row="1" data-column="2"></div>
+            <div class="box fa" data-row="2" data-column="0"></div>
+            <div class="box fa" data-row="2" data-column="1"></div>
+            <div class="box fa" data-row="2" data-column="2"></div>
+        </div>
+        <div class="score">
+            <div>Player 1 O</div>
+            <div>Player 2 X</div>
 
-        <div id="score1"></div>
-        <div id="score2"></div>
+            <div id="score1"></div>
+            <div id="score2"></div>
+        </div>
+        <div class="button">
+            <div id="btn" onclick="playAgainButton()">PLAY AGAIN</div>
+        </div>
+        <script src="script.js"></script>
     </div>
-    <div class="button">
-        <div id="btn" onclick="playAgainButton()">PLAY AGAIN</div>
-    </div>
-    <script src="script.js"></script>
 </body>
 
 </html>

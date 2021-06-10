@@ -1,5 +1,11 @@
 body { 
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content{
+    margin: auto;
+    width: 308px;
+    padding-top: 100px;
+
 }
 
 .board {
