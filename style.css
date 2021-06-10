@@ -1,5 +1,5 @@
 body { 
-    font-family: sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .board {
@@ -12,6 +12,18 @@ body {
     border: 1px solid #ddd;
     cursor: pointer;
 }
+
+.score {
+    width: 306px; /*w306 square*/
+    background: #f0f0f0; /* bg */ /*light gray*/
+    grid-template-columns: repeat(2, 1fr); /* 3px space */
+    grid-template-rows:  50px;
+    grid-gap: 3px;
+    display: grid;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
 
 .box {
     background: #fff; /*wwhite*/
@@ -26,3 +38,23 @@ body {
 .box:hover {
     background: #fafafa; /*white*/
 } 
+
+#btn{
+    width: 306px; /*w306 square*/
+    height: 50px; /*w306 square*/
+    background: #ddd; /* bg */ /*light gray*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    text-align: center;    
+    cursor: pointer;
+
+}
+
+#btn:hover {
+background: rgb(151, 151, 151);
+color:white;}
+#btn:active {
+    background: rgb(112, 109, 108);
+    color:white;}
