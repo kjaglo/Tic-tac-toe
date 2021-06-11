@@ -27,7 +27,10 @@ const winning_combinations = [
 ]
 
 function pick(event) {
-    if (endGame === false) {
+    if(endGame === true){
+        playAgainButton();
+    }
+    else if (endGame === false) {
         console.log(event.target.dataset) //DOMStringMap {row: "0", column: "0"}
         const { row, column } = event.target.dataset; // read data
         console.log(row, column) //0 0
@@ -80,7 +83,7 @@ function check() {
     return winner;
 }
 function playAgainButton() {
-    const playAgain = confirm("play again");
+    const playAgain = confirm("Play again?");
     if(playAgain){
         console.log("Play again");
         board = [

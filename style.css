@@ -45,6 +45,10 @@ body {
     background: #fafafa; /*white*/
 } 
 
+.box:active {
+    background: #eeeeee; /*white*/
+} 
+
 #btn{
     width: 306px; /*w306 square*/
     height: 50px; /*w306 square*/
