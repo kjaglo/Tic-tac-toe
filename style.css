@@ -32,13 +32,17 @@ body {
 
 
 .box {
-    background: #fff; /*wwhite*/
+    background: #fff; /*white*/
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     color: #222; /* black */
 
+}
+
+.box-winning {
+    background: rgb(255, 170, 170); 
 }
 
 .box:hover {

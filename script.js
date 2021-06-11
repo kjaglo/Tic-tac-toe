@@ -13,6 +13,7 @@ score2.innerHTML = points2;
 
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
+boxes.forEach(box => box.addEventListener('click', win));
 
 let board = [
     ['', '', ''],
@@ -53,7 +54,12 @@ function pick(event) {
 // console.log("2=2");
 // }
 // two();
+function win(event) {
+    // boxes.forEach(box => {if(box.classList.contains(player1))box.classList.add('box-winning')});
 
+    // event.target.classList.add('box-winning');
+
+}
 function check() {
     const result = board.reduce((total, row) => total.concat(row)); //["fa-circle-o", "", "", "", "", "", "", "", ""]
     console.log(result);
@@ -66,6 +72,12 @@ function check() {
     console.log(moves); //fa-circle-o: (3) [0, 4, 6]    fa-times: (2) [3, 7]
     winning_combinations.forEach(combination => {
         if (combination.every(index => moves[player1].indexOf(index) > -1)) {
+            console.log("c",combination)
+            console.log(board[0][combination[0]])
+            board[0][combination[0]]= "box-winning";
+            console.log(board[0][combination[0]])
+            boxes.forEach(box => {if(box.classList.contains(player1))box.classList.add('box-winning')});
+
             winner = "Winner: Player 1";
             points1++;
             alert(winner);
