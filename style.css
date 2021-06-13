@@ -1,6 +1,7 @@
 body { 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .content{
     margin: auto;
     width: 308px;
@@ -30,7 +31,6 @@ body {
     text-align: center;
 }
 
-
 .box {
     background: #fff; /*white*/
     display: flex;
@@ -38,7 +38,6 @@ body {
     align-items: center;
     font-size: 2rem;
     color: #222; /* black */
-
 }
 
 .box-winning1 {
@@ -67,12 +66,14 @@ body {
     border: 1px solid #ddd;
     text-align: center;    
     cursor: pointer;
-
 }
 
 #btn:hover {
-background: rgb(151, 151, 151);
-color:white;}
+    background: rgb(151, 151, 151);
+    color:white;
+}
+
 #btn:active {
     background: rgb(112, 109, 108);
-    color:white;}
+    color:white;
+}

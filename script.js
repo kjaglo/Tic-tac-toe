@@ -13,7 +13,6 @@ score2.innerHTML = points2;
 
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
-boxes.forEach(box => box.addEventListener('click', win));
 
 let board = [
     ['', '', ''],
@@ -54,13 +53,6 @@ function pick(event) {
 // console.log("2=2");
 // }
 // two();
-function win(event) {
-
-    // boxes.forEach(box => {if(box.classList.contains(player1))box.classList.add('box-winning')});
-
-    // event.target.classList.add('box-winning');
-
-}
 function check() {
     const result = board.reduce((total, row) => total.concat(row)); //["fa-circle-o", "", "", "", "", "", "", "", ""]
     console.log(result);
@@ -70,39 +62,32 @@ function check() {
         'fa-times': []
     };
     result.forEach((field, index) => moves[field] ? moves[field].push(index) : null);//if key exists push
-    // console.log(moves); //fa-circle-o: (3) [0, 4, 6]    fa-times: (2) [3, 7]
     winning_combinations.forEach(combination => {
         if (combination.every(index => {
-            // console.log(moves[player1].indexOf(index));
             return moves[player1].indexOf(index) > -1
         }
             )) {
-            // console.log("wining comb:", combination[0], combination[1], combination[2])
-            // console.log("c",combination)
-            // console.log(moves[player1].indexOf(index))
-            board[0][combination[0]]= "box-winning1";
-            // console.log(board[0][combination[0]])
-            // boxes.forEach(box => {if(box.classList.contains(player1))box.classList.add('box-winning1')});
-            // console.log("box 0000000 ",boxes[6])
+
             combination.forEach(c => boxes[c].classList.add('box-winning1'));
-
-
+            // boxes[6].classList.remove('fa-circle-o')
             winner = "Winner: Player 1";
             points1++;
             alert(winner);
             endGame = true;
             score1.innerHTML = points1;
+
         } else if (combination.every(index => moves[player2].indexOf(index) > -1)) {
+            combination.forEach(c => boxes[c].classList.add('box-winning2'));
             winner = "Winner: Player 2";
             points2++;
             alert(winner);
             endGame = true;
             score2.innerHTML = points2;
-
         }
     });
     return winner;
 }
+
 function playAgainButton() {
     const playAgain = confirm("Play again?");
     if(playAgain){
