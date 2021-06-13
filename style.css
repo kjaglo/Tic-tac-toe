@@ -58,7 +58,7 @@ body {
 
 #btn{
     width: 306px; /*w306 square*/
-    height: 50px; /*w306 square*/
+    height: 50px; 
     background: #ddd; /* bg */ /*light gray*/
     display: flex;
     justify-content: center;
@@ -76,4 +76,35 @@ body {
 #btn:active {
     background: rgb(112, 109, 108);
     color:white;
+}
+
+.next {
+    width: 306px; /*w306 square*/
+    background: #f0f0f0; /* bg */ /*light gray*/
+    grid-template-columns: repeat(3, 1fr); /* 3px space */
+    grid-template-rows:  100px;
+    grid-gap: 3px;
+    display: grid;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#next {
+    background: rgb(248, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(177, 177, 177); /* black */
+}
+
+.turn {
+    width: 306px; /*w306 square*/
+    height: 50px; 
+    background: #ddd; /* bg */ /*light gray*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    text-align: center;    
 }

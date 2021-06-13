@@ -10,6 +10,9 @@ const score1 = document.getElementById("score1");
 score1.innerHTML = points1;
 const score2 = document.getElementById("score2");
 score2.innerHTML = points2;
+const next = document.getElementById("next");
+next.classList.add(player1);
+
 
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
@@ -35,9 +38,12 @@ function pick(event) {
         const { row, column } = event.target.dataset; // read data
         console.log(row, column) //0 0
         const turn = round_number % 2 === 1 ? player1 : player2;
+        const next_turn = round_number % 2 === 0 ? player1 : player2;
         if (board[row][column] !== '') return; // if false go forward if true stop function
         picks++;
         event.target.classList.add(turn);
+        next.classList.remove(turn);
+        next.classList.add(next_turn);
         board[row][column] = turn;
         round_number++;
         console.log(check());
@@ -97,7 +103,7 @@ function playAgainButton() {
             ['', '', ''],
             ['', '', '']
         ];
-        round_number = 1;
+        // round_number = 1;
         picks = 0;
         endGame = false;
         boxes.forEach(box => box.classList="box fa");
