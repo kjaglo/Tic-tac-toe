@@ -55,6 +55,7 @@ function pick(event) {
 // }
 // two();
 function win(event) {
+
     // boxes.forEach(box => {if(box.classList.contains(player1))box.classList.add('box-winning')});
 
     // event.target.classList.add('box-winning');
@@ -69,14 +70,22 @@ function check() {
         'fa-times': []
     };
     result.forEach((field, index) => moves[field] ? moves[field].push(index) : null);//if key exists push
-    console.log(moves); //fa-circle-o: (3) [0, 4, 6]    fa-times: (2) [3, 7]
+    // console.log(moves); //fa-circle-o: (3) [0, 4, 6]    fa-times: (2) [3, 7]
     winning_combinations.forEach(combination => {
-        if (combination.every(index => moves[player1].indexOf(index) > -1)) {
-            console.log("c",combination)
-            console.log(board[0][combination[0]])
-            board[0][combination[0]]= "box-winning";
-            console.log(board[0][combination[0]])
-            boxes.forEach(box => {if(box.classList.contains(player1))box.classList.add('box-winning')});
+        if (combination.every(index => {
+            // console.log(moves[player1].indexOf(index));
+            return moves[player1].indexOf(index) > -1
+        }
+            )) {
+            // console.log("wining comb:", combination[0], combination[1], combination[2])
+            // console.log("c",combination)
+            // console.log(moves[player1].indexOf(index))
+            board[0][combination[0]]= "box-winning1";
+            // console.log(board[0][combination[0]])
+            // boxes.forEach(box => {if(box.classList.contains(player1))box.classList.add('box-winning1')});
+            // console.log("box 0000000 ",boxes[6])
+            combination.forEach(c => boxes[c].classList.add('box-winning1'));
+
 
             winner = "Winner: Player 1";
             points1++;

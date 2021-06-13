@@ -41,8 +41,12 @@ body {
 
 }
 
-.box-winning {
+.box-winning1 {
     background: rgb(255, 170, 170); 
+}
+
+.box-winning2 {
+    background: rgb(159, 247, 232); 
 }
 
 .box:hover {
