@@ -50,6 +50,12 @@ function pick(event) {
         if (endGame === false && picks === 9) {
             alert("Draw");
             picks = 0;
+            points1++;
+            points2++;
+            score1.innerHTML = points1;
+            score2.innerHTML = points2;
+            endGame = true;
+
         }
     }
 }
