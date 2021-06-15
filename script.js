@@ -81,7 +81,6 @@ function check() {
             )) {
 
             combination.forEach(c => boxes[c].classList.add('box-winning1'));
-            // boxes[6].classList.remove('fa-circle-o')
             winner = "Winner: Player 1";
             points1++;
             alert(winner);
