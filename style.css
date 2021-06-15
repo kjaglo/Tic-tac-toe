@@ -55,12 +55,12 @@ body {
 
 }
 
-#points1 {
-    font-size: 0.3rem;
+.points1 {
+    font-size: 1.3rem;
 }
 
-#points2 {
-    font-size: 0.3rem;
+.points2 {
+    font-size: 1.3rem;
 }
 
 .box {
@@ -99,7 +99,9 @@ body {
     border: 1px solid #ddd;
     text-align: center;    
     cursor: pointer;
-    border-radius: 3%}
+    border-radius: 3%;
+    font-size: 1.3rem;
+}
 
 #btn:hover {
     background: rgb(151, 151, 151);
@@ -130,7 +132,7 @@ body {
     align-items: center;
     font-size: 2.3rem;
     color: rgb(143, 142, 142); 
-    border-radius: 3%
+    border-radius: 10%;
 }
 
 .turn {
@@ -142,6 +144,7 @@ body {
     align-items: center;
     border: 1px solid #ddd;
     text-align: center;    
-    border-radius: 3%
+    border-radius: 3%;
+    font-size: 1.3rem;
 
 }
