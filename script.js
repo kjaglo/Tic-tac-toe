@@ -2,7 +2,6 @@ const player1 = 'fa-circle-o';
 const player2 = 'fa-times';
 let round_number = 1; //odd - player 1, even - player2
 let endGame = false;
-
 let picks = 0;
 let points1 = 0;
 let points2 = 0;
@@ -12,8 +11,6 @@ const score2 = document.getElementById("score2");
 score2.innerHTML = points2;
 const next = document.getElementById("next");
 next.classList.add(player1);
-
-
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
 
@@ -75,11 +72,7 @@ function check() {
     };
     result.forEach((field, index) => moves[field] ? moves[field].push(index) : null);//if key exists push
     winning_combinations.forEach(combination => {
-        if (combination.every(index => {
-            return moves[player1].indexOf(index) > -1
-        }
-            )) {
-
+        if (combination.every(index => moves[player1].indexOf(index) > -1)) {
             combination.forEach(c => boxes[c].classList.add('box-winning1'));
             winner = "Winner: Player 1";
             points1++;
@@ -112,6 +105,5 @@ function playAgainButton() {
         picks = 0;
         endGame = false;
         boxes.forEach(box => box.classList="box fa");
-
     }
 }
