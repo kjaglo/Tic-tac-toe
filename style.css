@@ -88,7 +88,7 @@ body {
     background: #eeeeee; /*white*/
 } 
 
-#btn{
+.btn{
     width: 306px; /*w306 square*/
     height: 50px; 
     background: #ddd; /* bg */ /*light gray*/
@@ -102,14 +102,18 @@ body {
     font-size: 1.5rem;
 }
 
-#btn:hover {
+.btn:hover {
     background: rgb(151, 151, 151);
     color:white;
 }
 
-#btn:active {
+.btn:active {
     background: rgb(112, 109, 108);
     color:white;
+}
+
+#btn-comp {
+    font-size: 1.2rem;
 }
 
 .next {
