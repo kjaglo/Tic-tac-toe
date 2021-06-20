@@ -13,6 +13,8 @@ const next = document.getElementById("next");
 next.classList.add(player1);
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
+const playAgainstComputer = confirm("Do you want to play against computer?");
+
 
 let board = [
     ['', '', ''],
@@ -107,3 +109,4 @@ function playAgainButton() {
         boxes.forEach(box => box.classList="box fa");
     }
 }
+
