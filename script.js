@@ -109,4 +109,10 @@ function playAgainButton() {
         boxes.forEach(box => box.classList="box fa");
     }
 }
-
+numbers = [0,1,2,3,4,5,6,7,8]
+function pickRandom() {
+    numbers.forEach(n => console.log(n));
+    random = numbers[Math.floor(Math.random()*numbers.length)];
+    console.log(random)
+}
+pickRandom();
