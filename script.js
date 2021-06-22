@@ -13,9 +13,9 @@ const next = document.getElementById("next");
 next.classList.add(player1);
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
-const playAgainstComputer = confirm("Do you want to play against computer?");
+// const playAgainstComputer = confirm("Do you want to play against computer?");
 
-
+const playAgainstComputer =false;
 let board = [
     ['', '', ''],
     ['', '', ''],
@@ -29,35 +29,42 @@ const winning_combinations = [
 ]
 
 function pick(event) {
-    if(endGame === true){
+    if (endGame === true) {
         playAgainButton();
     }
     else if (endGame === false) {
         console.log(event.target.dataset) //DOMStringMap {row: "0", column: "0"}
         const { row, column } = event.target.dataset; // read data
         console.log(row, column) //0 0
-        const turn = round_number % 2 === 1 ? player1 : player2;
+        let turn = round_number % 2 === 1 ? player1 : player2;
         const next_turn = round_number % 2 === 0 ? player1 : player2;
         if (board[row][column] !== '') return; // if false go forward if true stop function
+
+        if (playAgainstComputer === true) {
+            pickRandom();
+            turn=player1;
+        }
         picks++;
         event.target.classList.add(turn);
         next.classList.remove(turn);
         next.classList.add(next_turn);
         board[row][column] = turn;
-        round_number++;
-        console.log(check());
-        if (endGame === false && picks === 9) {
-            alert("Draw");
-            picks = 0;
-            points1++;
-            points2++;
-            score1.innerHTML = points1;
-            score2.innerHTML = points2;
-            endGame = true;
 
-        }
+    }
+    round_number++;
+    console.log(check());
+    if (endGame === false && picks === 9) {
+        alert("Draw");
+        picks = 0;
+        points1++;
+        points2++;
+        score1.innerHTML = points1;
+        score2.innerHTML = points2;
+        endGame = true;
+
     }
 }
+
 // function two() {
 // if (2===1) return; // if true false forward if true stop function
 // console.log("trueee");
@@ -96,7 +103,7 @@ function check() {
 
 function playAgainButton() {
     const playAgain = confirm("Play again?");
-    if(playAgain){
+    if (playAgain) {
         console.log("Play again");
         board = [
             ['', '', ''],
@@ -106,13 +113,24 @@ function playAgainButton() {
         // round_number = 1;
         picks = 0;
         endGame = false;
-        boxes.forEach(box => box.classList="box fa");
+        boxes.forEach(box => box.classList = "box fa");
     }
 }
-numbers = [0,1,2,3,4,5,6,7,8]
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 function pickRandom() {
-    numbers.forEach(n => console.log(n));
-    random = numbers[Math.floor(Math.random()*numbers.length)];
-    console.log(random)
+    if (playAgainstComputer === true) {
+        r1 = Math.floor(Math.random() * 3)
+        r2 = Math.floor(Math.random() * 3)
+
+        while (board[r1][r2] !== '') {
+            r1 = Math.floor(Math.random() * 3)
+            r2 = Math.floor(Math.random() * 3)
+            console.log("RRRRRRRRRRR", r1, r2);
+        }
+
+
+        board[r1][r2] = player2;
+        // console.log("RRRRRRRRRRR", r1, r2);
+        boxes[r1 + r2].classList.add(player2);
+    }
 }
-pickRandom();
