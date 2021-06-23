@@ -15,7 +15,7 @@ const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
 // const playAgainstComputer = confirm("Do you want to play against computer?");
 
-const playAgainstComputer =false;
+const playAgainstComputer =true;
 let board = [
     ['', '', ''],
     ['', '', ''],
@@ -33,9 +33,9 @@ function pick(event) {
         playAgainButton();
     }
     else if (endGame === false) {
-        console.log(event.target.dataset) //DOMStringMap {row: "0", column: "0"}
+        // console.log(event.target.dataset) //DOMStringMap {row: "0", column: "0"}
         const { row, column } = event.target.dataset; // read data
-        console.log(row, column) //0 0
+        // console.log(row, column) //0 0
         let turn = round_number % 2 === 1 ? player1 : player2;
         const next_turn = round_number % 2 === 0 ? player1 : player2;
         if (board[row][column] !== '') return; // if false go forward if true stop function
@@ -49,7 +49,6 @@ function pick(event) {
         next.classList.remove(turn);
         next.classList.add(next_turn);
         board[row][column] = turn;
-
     }
     round_number++;
     console.log(check());
@@ -61,7 +60,6 @@ function pick(event) {
         score1.innerHTML = points1;
         score2.innerHTML = points2;
         endGame = true;
-
     }
 }
 
@@ -73,7 +71,7 @@ function pick(event) {
 // two();
 function check() {
     const result = board.reduce((total, row) => total.concat(row)); //["fa-circle-o", "", "", "", "", "", "", "", ""]
-    console.log(result);
+    // console.log(result);
     let winner = null;
     let moves = {
         'fa-circle-o': [],
@@ -104,7 +102,7 @@ function check() {
 function playAgainButton() {
     const playAgain = confirm("Play again?");
     if (playAgain) {
-        console.log("Play again");
+        // console.log("Play again");
         board = [
             ['', '', ''],
             ['', '', ''],
@@ -127,8 +125,6 @@ function pickRandom() {
             r2 = Math.floor(Math.random() * 3)
             console.log("RRRRRRRRRRR", r1, r2);
         }
-
-
         board[r1][r2] = player2;
         // console.log("RRRRRRRRRRR", r1, r2);
         boxes[r1 + r2].classList.add(player2);
