@@ -13,9 +13,9 @@ const next = document.getElementById("next");
 next.classList.add(player1);
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
-// const playAgainstComputer = confirm("Do you want to play against computer?");
+const playAgainstComputer = confirm("Do you want to play against computer?");
 
-const playAgainstComputer =true;
+// const playAgainstComputer =true;
 let board = [
     ['', '', ''],
     ['', '', ''],
@@ -112,6 +112,7 @@ function playAgainButton() {
         picks = 0;
         endGame = false;
         boxes.forEach(box => box.classList = "box fa");
+
     }
 }
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -123,10 +124,10 @@ function pickRandom() {
         while (board[r1][r2] !== '') {
             r1 = Math.floor(Math.random() * 3)
             r2 = Math.floor(Math.random() * 3)
-            console.log("RRRRRRRRRRR", r1, r2);
+            // console.log("RRRRRRRRRRR", r1, r2);
         }
         board[r1][r2] = player2;
         // console.log("RRRRRRRRRRR", r1, r2);
-        boxes[r1 + r2].classList.add(player2);
+        boxes[3*r1 + r2].classList.add(player2);
     }
 }
