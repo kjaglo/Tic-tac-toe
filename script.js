@@ -117,6 +117,7 @@ function playAgainButton() {
 }
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 function pickRandom() {
+    if(endGame===false){
     if (playAgainstComputer === true) {
         r1 = Math.floor(Math.random() * 3)
         r2 = Math.floor(Math.random() * 3)
@@ -130,4 +131,5 @@ function pickRandom() {
         // console.log("RRRRRRRRRRR", r1, r2);
         boxes[3*r1 + r2].classList.add(player2);
     }
+}
 }
