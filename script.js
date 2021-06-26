@@ -15,7 +15,6 @@ const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
 const playAgainstComputer = confirm("Do you want to play against computer?");
 
-// const playAgainstComputer =true;
 let board = [
     ['', '', ''],
     ['', '', ''],
@@ -35,7 +34,6 @@ function pick(event) {
     else if (endGame === false) {
         // console.log(event.target.dataset) //DOMStringMap {row: "0", column: "0"}
         const { row, column } = event.target.dataset; // read data
-        // console.log(row, column) //0 0
         let turn = round_number % 2 === 1 ? player1 : player2;
         const next_turn = round_number % 2 === 0 ? player1 : player2;
         if (board[row][column] !== '') return; // if false go forward if true stop function
@@ -71,7 +69,6 @@ function pick(event) {
 // two();
 function check() {
     const result = board.reduce((total, row) => total.concat(row)); //["fa-circle-o", "", "", "", "", "", "", "", ""]
-    // console.log(result);
     let winner = null;
     let moves = {
         'fa-circle-o': [],
@@ -102,17 +99,14 @@ function check() {
 function playAgainButton() {
     const playAgain = confirm("Play again?");
     if (playAgain) {
-        // console.log("Play again");
         board = [
             ['', '', ''],
             ['', '', ''],
             ['', '', '']
         ];
-        // round_number = 1;
         picks = 0;
         endGame = false;
         boxes.forEach(box => box.classList = "box fa");
-
     }
 }
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -125,10 +119,8 @@ function pickRandom() {
         while (board[r1][r2] !== '') {
             r1 = Math.floor(Math.random() * 3)
             r2 = Math.floor(Math.random() * 3)
-            // console.log("RRRRRRRRRRR", r1, r2);
         }
         board[r1][r2] = player2;
-        // console.log("RRRRRRRRRRR", r1, r2);
         boxes[3*r1 + r2].classList.add(player2);
     }
 }
