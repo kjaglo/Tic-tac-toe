@@ -4,13 +4,7 @@
 
 ## Features
 
-## Presentation​
-
-### Start
-
-<img src="pictures/battleship1.PNG"
-     alt="Start"/>
-
+## Presentation
 
 ### Start
 
