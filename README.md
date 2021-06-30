@@ -4,6 +4,8 @@
 
 ## Features
 
+Play against computer or with your friend
+
 ## Presentation
 
 ### Start
