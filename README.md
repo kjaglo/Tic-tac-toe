@@ -1,7 +1,7 @@
 # Tic-tac-toe
 
 ## Description
-
+ 
 ## Features
 
 Play against computer or with your friend
