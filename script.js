@@ -14,6 +14,7 @@ next.classList.add(player1);
 const boxes = [...document.querySelectorAll('.box')]; //spread operator
 boxes.forEach(box => box.addEventListener('click', pick));
 const playAgainstComputer = confirm("Do you want to play against computer?");
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 let board = [
     ['', '', ''],
@@ -109,7 +110,7 @@ function playAgainButton() {
         boxes.forEach(box => box.classList = "box fa");
     }
 }
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
 function pickRandom() {
     if(endGame===false){
     if (playAgainstComputer === true) {
