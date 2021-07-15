@@ -41,7 +41,7 @@ function pick(event) {
 
         if (playAgainstComputer === true) {
             pickRandom();
-            turn=player1;
+            turn = player1;
         }
         picks++;
         event.target.classList.add(turn);
@@ -112,17 +112,17 @@ function playAgainButton() {
 }
 
 function pickRandom() {
-    if(endGame===false){
-    if (playAgainstComputer === true) {
-        r1 = Math.floor(Math.random() * 3)
-        r2 = Math.floor(Math.random() * 3)
-
-        while (board[r1][r2] !== '') {
+    if (endGame === false) {
+        if (playAgainstComputer === true) {
             r1 = Math.floor(Math.random() * 3)
             r2 = Math.floor(Math.random() * 3)
+
+            while (board[r1][r2] !== '') {
+                r1 = Math.floor(Math.random() * 3)
+                r2 = Math.floor(Math.random() * 3)
+            }
+            board[r1][r2] = player2;
+            boxes[3 * r1 + r2].classList.add(player2);
         }
-        board[r1][r2] = player2;
-        boxes[3*r1 + r2].classList.add(player2);
     }
-}
 }
