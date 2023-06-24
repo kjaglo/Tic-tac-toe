@@ -38,32 +38,27 @@ The objective of the game is to be the first player to form a horizontal, vertic
 
 ### Start
 
-<p align="center" style="margin-bottom: 0px !important;">
+<p align="center">
 
-<img width="300" src="pictures/gra1.PNG"
-     alt="Ship placement"/>
+<img width="300"  src="pictures/gra1.PNG" alt="Ship placement">
 </p>
 
 ### Play mode
 
 <p align="center">
 
-<img width="300" src="pictures/gra2.PNG"
-     alt="Play mode"/>
+<img width="300" height="600" src="pictures/gra2.PNG" alt="Play mode"/>
 
-<img width="300" src="pictures/gra3.PNG"
-     alt="Shooting"/>
+<img width="300" height="600" src="pictures/gra3.PNG" alt="Shooting"/>
 </p>
 
 ### End game
 
 <p align="center">
 
-<img width="300" src="pictures/gra4.PNG"
-     alt="End game"/>
+<img height="600" src="pictures/gra4.PNG" alt="End game"/>
 
-<img width="300" src="pictures/gra5.PNG"
-     alt="End game"/>
+<img height="600" src="pictures/gra5.PNG" alt="End game"/>
 </p>
 
 Enjoy playing Tic-tac-toe!
