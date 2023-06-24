@@ -32,9 +32,9 @@ This is a simple implementation of the classic Tic-tac-toe game using plain Java
 
 ### Start
 
-<p align="center">
+<p align="center" style="margin-bottom: 0px !important;">
 
-<img src="pictures/gra1.PNG"
+<img width="300" src="pictures/gra1.PNG"
      alt="Ship placement"/>
 </p>
 
@@ -42,10 +42,10 @@ This is a simple implementation of the classic Tic-tac-toe game using plain Java
 
 <p align="center">
 
-<img src="pictures/gra2.PNG"
+<img width="300" src="pictures/gra2.PNG"
      alt="Play mode"/>
 
-<img src="pictures/gra3.PNG"
+<img width="300" src="pictures/gra3.PNG"
      alt="Shooting"/>
 </p>
 
@@ -53,10 +53,10 @@ This is a simple implementation of the classic Tic-tac-toe game using plain Java
 
 <p align="center">
 
-<img src="pictures/gra4.PNG"
+<img width="300" src="pictures/gra4.PNG"
      alt="End game"/>
 
-<img src="pictures/gra5.PNG"
+<img width="300" src="pictures/gra5.PNG"
      alt="End game"/>
 </p>
 
