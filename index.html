@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-tac-toe</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
-        type="text/css" />
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="content">
-        <!-- <div class="turn">   
+      <!-- <div class="turn">   
         <div class="btn" id="btn-comp" onclick="playAgainstComputerButton()">PLAY AGAINST COMPUTER</div>
         </div> -->
-            <div class="turn">
-                
-            <div>TURN</div>
-        </div>
+      <div class="turn">
+        <div>TURN</div>
+      </div>
 
-        <div class="next">
-            <div></div>
-            <div id="next" class="fa"></div>
-        </div>
-        <div class="board">
-            <!-- .board -->
+      <div class="next">
+        <div></div>
+        <div id="next" class="fa"></div>
+      </div>
+      <div class="board">
+        <!-- .board -->
 
-            <!-- .box.fa[data-row data-column]*9 -->
+        <!-- .box.fa[data-row data-column]*9 -->
 
-            <div id="aa" class="box fa" data-row="0" data-column="0"></div>
-            <div class="box fa" data-row="0" data-column="1"></div>
-            <div class="box fa" data-row="0" data-column="2"></div>
-            <div class="box fa" data-row="1" data-column="0"></div>
-            <div class="box fa" data-row="1" data-column="1"></div>
-            <div class="box fa" data-row="1" data-column="2"></div>
-            <div class="box fa" data-row="2" data-column="0"></div>
-            <div class="box fa" data-row="2" data-column="1"></div>
-            <div class="box fa" data-row="2" data-column="2"></div>
-        </div>
-        <div class="score">
-            <div class="score1 fa fa-circle-o"></div>
-            <div class="score2 fa fa-times"></div>
+        <div id="aa" class="box fa" data-row="0" data-column="0"></div>
+        <div class="box fa" data-row="0" data-column="1"></div>
+        <div class="box fa" data-row="0" data-column="2"></div>
+        <div class="box fa" data-row="1" data-column="0"></div>
+        <div class="box fa" data-row="1" data-column="1"></div>
+        <div class="box fa" data-row="1" data-column="2"></div>
+        <div class="box fa" data-row="2" data-column="0"></div>
+        <div class="box fa" data-row="2" data-column="1"></div>
+        <div class="box fa" data-row="2" data-column="2"></div>
+      </div>
+      <div class="score">
+        <div class="score1 fa fa-circle-o"></div>
+        <div class="score2 fa fa-times"></div>
 
-            <div class="score1 points1" id="score1"></div>
-            <div class="score2 points2" id="score2"></div>
-        </div>
-        <div class="button">
-            <div class="btn" onclick="playAgainButton()">PLAY AGAIN</div>
-        </div>
-        <script src="script.js"></script>
+        <div class="score1 points1" id="score_player1"></div>
+        <div class="score2 points2" id="score_player2"></div>
+      </div>
+      <div class="button">
+        <div class="btn" onclick="playAgainButton()">PLAY AGAIN</div>
+      </div>
+      <script src="script.js"></script>
     </div>
-</body>
-
+  </body>
 </html>
